@@ -1,0 +1,37 @@
+PLANNING NOTES
+
+Here are a few examples of how to write notes to plan ahead for different parts of your program. 
+
+1. IMPORTS
+	- Need readline-sync module for getting user input
+    - Need fs module for reading JSON file
+
+2. DATA I HAVE, DATA I NEED
+	- Doctors' names and numbers are in a local JSON file which needs to be read and converted to an array of JS objects
+	- Need to ask user for their choice of search types and correlate that to the search functions
+	- If searching by name, will need a string (no numbers or spaces)
+	- If searching by first letter of last name...
+	- If searching by area code...
+	- When pulling matching records for user...
+	- When printing results...
+	- Will need to ask user if they want to do another search...
+
+3. SMALL FUNCTIONS
+	- Create array of JS objects from JSON file 
+	- Get search type from user
+	- Search by name
+	- Search by first letter of last name
+	- Search by area code
+    - Sort by last name
+	- Print formatted results to console
+
+4. MAIN FUNCTION
+	- transform doctors data
+	- print some sort of intro message
+	- loop until user is done:
+		- get search type & validate
+        - get info from user to perform search
+        - run search
+        - print results
+        - ask if they want to do another search
+	- print some kind of exit message

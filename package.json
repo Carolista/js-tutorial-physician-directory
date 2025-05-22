@@ -1,0 +1,23 @@
+{
+	"name": "js-tutorial-physician-directory",
+	"version": "1.0.0",
+	"description": "An example of building a simple JS app to run in the console.",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "none"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Carolista/js-tutorial-physician-directory.git"
+	},
+	"author": "Carrie Jones",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Carolista/js-tutorial-physician-directory/issues"
+	},
+	"homepage": "https://github.com/Carolista/js-tutorial-physician-directory#readme",
+	"dependencies": {
+		"readline-sync": "^1.4.10"
+	}
+}

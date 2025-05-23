@@ -1,19 +1,20 @@
+// Import fs and readline-sync
 const fs = require('fs');
 const input = require('readline-sync');
 
-// TODO: Transform JSON to JS
+// Transform JSON to JS
 function getJSFromJSON(filePath) {
 	const jsonData = fs.readFileSync(filePath, 'utf-8');
 	return JSON.parse(jsonData);
 }
 
-// TODO: Sort results by last name
+// Sort results by last name
 function sortByLastName(data) {
     data.sort((a, b) => a.lastName - b.lastName);
     // No return - it mutates the array
 }
 
-// TODO: Ask user for type of search & validate response
+// Ask user for type of search & validate response
 function getSearchType() {
 	let options = `  0 - Search by name
   1 - Search by first letter of last name
@@ -27,13 +28,12 @@ ${options}`;
 	// Validate
 	while (searchType < 0 || searchType > 3 || isNaN(searchType)) {
 		searchType = input.question(`
-Please enter a valid number. ${question} 
-${options}`);
+Please enter a valid number. ${question}`);
 	}
 	return searchType;
 }
 
-// TODO: Filter listings by name (check both first and last names for keyword)
+// Filter listings by name (check both first and last names for keyword)
 function searchByName(data) {
 	// Ask user for all or part of a name
 	let searchTerm = input.question('\nPlease enter first OR last name: \n');
@@ -49,7 +49,7 @@ function searchByName(data) {
 	);
 }
 
-// TODO: Filter listings by first letter of last name
+// Filter listings by first letter of last name
 function searchByFirstLetter(data) {
 	// Ask user for a letter
 	let letter = input.question("\nWhich letter of the alphabet would you like to use to search last names?\n");
@@ -61,7 +61,7 @@ function searchByFirstLetter(data) {
 	return data.filter(doctor => letter.toUpperCase() === doctor.lastName[0]);
 }
 
-// TODO: Filter listings by area code
+// Filter listings by area code
 function searchByAreaCode(data) {
 	// Ask user for an area code
 	let areaCode = input.question("\nWhich area code would you like to search? Choices are 314, 618, and 636:\n");
@@ -73,7 +73,7 @@ function searchByAreaCode(data) {
 	return data.filter(doctor => doctor.phoneNumber.startsWith(areaCode));
 }
 
-// TODO: Format and print results
+// Format and print results
 function displaySearchResults(results) {
     // Handle cases where results array has no records
 	if (results.length === 0) {

@@ -1,6 +1,6 @@
 /**** IMPORTS ****/
 
-// TODO: import readline-sync library & helper functions
+// import readline-sync library & helper functions
 const input = require('readline-sync');
 const {
 	getJSFromJSON,
@@ -12,20 +12,22 @@ const {
     sortByLastName,
 } = require('./helpers.js');
 
+
 /**** DATA ****/
 
-// TODO: Transform data
+// Transform data
 const doctorData = getJSFromJSON('./doctors.json');
 
-// TODO: Sort data by last name
+// Sort data by last name
 sortByLastName(doctorData);
 
-// TODO: Collect 3 search functions in an array (corresponding to types)
+// Collect 3 search functions in an array (corresponding to types)
 const searchFunctions = [searchByName, searchByFirstLetter, searchByAreaCode];
+
 
 /**** MAIN FUNCTION ****/
 
-// TODO: Put everything together in a single function
+// Put everything together in a single function
 function runProgram() {
 	
     // Display intro to user
@@ -59,5 +61,5 @@ function runProgram() {
 	console.log("\nThank you for using our directory!\n")
 }
 
-// TODO: Call main function so that program will run
+// Call main function so that program will run
 runProgram();
